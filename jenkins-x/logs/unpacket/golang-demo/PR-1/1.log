@@ -1,0 +1,136 @@
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-kxz8m[0m
+{"level":"warn","ts":1567812420.8022447,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567812420.803331,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-bk4rw[0m
+{"level":"warn","ts":1567812422.0354135,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567812422.0413008,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-unpacket-golang-demo-pr-1-m92qz[0m
+{"level":"warn","ts":1567812432.0545518,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567812432.2985506,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/golang-demo.git @ 24cdd585e0df2728667c239aa70066233b93199c in path /workspace/source"}
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:24cdd585e0df2728667c239aa70066233b93199c,1:1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e
+DEBUG: ran git fetch --unshallow origin 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e: 24cdd585e0df2728667c239aa70066233b93199c: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 24cdd585e0df2728667c239aa70066233b93199c in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e in 
+Merged SHA 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e with commit message 'Modified' into base branch master
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e: 24cdd585e0df2728667c239aa70066233b93199c: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 24cdd585e0df2728667c239aa70066233b93199c in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e in 
+Merged SHA 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e with commit message 'Modified' into base branch master
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-serverless-jenkins-effective.yml
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for ********-golang-demo-PR-1-1
+Applying changes 
+upserted PipelineResource ********-golang-demo-pr-1-serve for the git repository https://github.com/********/golang-demo.git
+upserted Task ********-golang-demo-pr-1-serve-from-build-pack-1
+upserted Pipeline ********-golang-demo-pr-1-serve-1
+created PipelineRun ********-golang-demo-pr-1-serve-1
+created PipelineStructure ********-golang-demo-pr-1-serve-1
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-q66pj[0m
+{"level":"warn","ts":1567812440.221141,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567812440.2216403,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-2q6g9[0m
+{"level":"warn","ts":1567812440.484151,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567812440.4881182,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/preview\""}
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-unpacket-golang-demo-pr-1-serve-bxkdr[0m
+{"level":"warn","ts":1567812447.591344,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567812447.779997,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/golang-demo.git @ master in path /workspace/source"}
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:24cdd585e0df2728667c239aa70066233b93199c,1:1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e
+DEBUG: ran git fetch --unshallow origin 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e: 24cdd585e0df2728667c239aa70066233b93199c: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 24cdd585e0df2728667c239aa70066233b93199c in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e in 
+Merged SHA 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e with commit message 'Modified' into base branch master
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/golang-demo main.go
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/golang-demo"]                  
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/09/06 23:27:36 pushed blob: sha256:480f59c2fce865ac00b59f28791731e0cda822e9807aef04cfaa9d4f0037a7cb
+2019/09/06 23:27:36 pushed blob: sha256:ad52053545d17ed1b7fa2edc3153bc7b3c2bd7ac57c6300fdef76abb6922f81e
+2019/09/06 23:27:37 411493707527.dkr.ecr.us-west-2.amazonaws.com/********/golang-demo:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:d2b7f7cc4230822fe4bcdeacc1264aeed104a1c65b63f3d26cb8e967e343c4ad size: 428
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 411493707527.dkr.ecr.us-west-2.amazonaws.com\/********\/golang-demo|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32munpacket-golang-demo-pr-1-serve-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+WARNING: No author for commit: 1a63c73aee6d7bc293d4d941d3bd2325d4bebd2e
+Created environment ********-golang-demo-pr-1
+Namespace **-********-golang-demo-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: coliseumusa.com
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: 411493707527.dkr.ecr.us-west-2.amazonaws.com/********/golang-demo
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+
+
+Updating PipelineActivities ********-golang-demo-pr-1-1 which has status Running
+Preview application is now available at: http://golang-demo.**-********-golang-demo-pr-1.coliseumusa.com
