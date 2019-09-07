@@ -1,0 +1,161 @@
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-pcrmz[0m
+{"level":"warn","ts":1567816722.8836284,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567816722.884673,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-g5nff[0m
+{"level":"warn","ts":1567816723.2130358,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567816723.2191937,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-unpacket-golang-demo-maste-qwlrp[0m
+{"level":"warn","ts":1567816728.2862358,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567816728.5312855,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/golang-demo.git @ eb50fa6f09cacb45e1823fec5c1e0ae39328664e in path /workspace/source"}
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:eb50fa6f09cacb45e1823fec5c1e0ae39328664e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/golang-demo/Chart.yaml to 0.0.3
+Updating repository in charts/golang-demo/values.yaml to 411493707527.dkr.ecr.us-west-2.amazonaws.com/********/golang-demo
+Updating tag in charts/golang-demo/values.yaml to 0.0.3
+Tag v0.0.3 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for ********-golang-demo-master-3
+Applying changes 
+upserted PipelineResource ********-golang-demo-master-rel for the git repository https://github.com/********/golang-demo.git
+upserted Task ********-golang-demo-master-rel-6kzh8-from-build-pack-3
+upserted Pipeline ********-golang-demo-master-rel-6kzh8-3
+created PipelineRun ********-golang-demo-master-rel-6kzh8-3
+created PipelineStructure ********-golang-demo-master-rel-6kzh8-3
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-credential-initializer-djfkk[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-djfkk[0m
+{"level":"warn","ts":1567816739.6700926,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567816739.6704106,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-working-dir-initializer-wxn94[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-wxn94[0m
+{"level":"warn","ts":1567816740.6681087,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567816740.6691625,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/golang-demo\""}
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-place-tools[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-source-unpacket-golang-demo-master-rel-tsp5m[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-unpacket-golang-demo-master-rel-tsp5m[0m
+{"level":"warn","ts":1567816746.7307584,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567816746.9660985,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/golang-demo.git @ v0.0.3 in path /workspace/source"}
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-merge[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:eb50fa6f09cacb45e1823fec5c1e0ae39328664e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-setup-jx-git-credentials[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-make-build[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/golang-demo main.go
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-container-build[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/golang-demo"]                  
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/09/07 00:39:14 pushed blob: sha256:72906b7c6faddbd591ad6d9b3e4305ac64ba40c3be7a9d11b517f587da6dc5d4
+2019/09/07 00:39:14 pushed blob: sha256:d3fca1c3dce9c53e0b0d874d573bc86d787275c1c97e7f2362dfb0f7063bb286
+2019/09/07 00:39:15 411493707527.dkr.ecr.us-west-2.amazonaws.com/********/golang-demo:0.0.3: digest: sha256:51e0156cbc059f9ab619be9f61b703867de9b70e3d7b71aecc0b5c5b074c3608 size: 428
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-post-build[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-changelog[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/golang-demo to an unshallow repository
+Generating change log from git ref 53874fcf17b255014d302829c08059045ed9a3c0 => b031ac666d0e92c6cab96c59af2caa9e6bf83809
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit eb50fa6f09cacb45e1823fec5c1e0ae39328664e with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit eb50fa6f09cacb45e1823fec5c1e0ae39328664e with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for ********/golang-demo and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/********/golang-demo/releases/tag/v0.0.3
+generated: /workspace/source/charts/golang-demo/templates/release.yaml
+Created Release golang-demo-0-0-3 resource in namespace **
+Updating PipelineActivity ********-golang-demo-master-3 with version 0.0.3
+Updated PipelineActivities ********-golang-demo-master-3 with release notes URL: https://github.com/********/golang-demo/releases/tag/v0.0.3
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-helm-release[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file golang-demo-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-jx-promote[0m to start...
+
+
+Showing logs for build [32mmeta-unpacket-golang-demo-maste-5gmsf-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app golang-demo version 0.0.3 to namespace **-staging
+Created Pull Request: https://github.com/********/environment-coliseumusa-staging/pull/4
+Pull Request https://github.com/********/environment-coliseumusa-staging/pull/4 is merged at sha c52aaec7817c5b05e332c6af543eab58c44cbb57
+Pull Request merged but we are not waiting for the update pipeline to complete!
