@@ -2,4 +2,4 @@
 export UUID=$(uuidgen)
 
 make skaffold-run
-reflex -r "\.go$" -R "vendor.*" make skaffold-run
+reflex -r "\.go$" -R "vendor.*" -- bash -c 'export UUID=$(uuidgen) && make skaffold-run
